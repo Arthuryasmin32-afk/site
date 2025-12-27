@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificando chave PIX...</title>
+
+  <!-- REDIRECIONAMENTO FINAL -->
+  <script>
+    // muda a mensagem depois de 2 segundos
+    setTimeout(function () {
+      document.getElementById("mensagem").innerText = "Chave PIX aceita";
+    }, 2000);
+
+    // redireciona depois de 4 segundos
+    setTimeout(function () {
+      window.location.href = "13.html";
+    }, 4000);
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #0b3d2e; /* verde escuro */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .loader {
+      width: 60px;
+      height: 60px;
+      border: 6px solid rgba(255, 255, 255, 0.2);
+      border-top: 6px solid #1db954; /* verde vivo */
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 20px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    p {
+      margin-top: 8px;
+      font-size: 14px;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="loader"></div>
+    <h2 id="mensagem">Verificando chave PIX...</h2>
+    <p>Aguarde alguns instantes</p>
+  </div>
+</body>
+</html>
